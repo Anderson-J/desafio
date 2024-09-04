@@ -2,14 +2,25 @@
 
 ![Capa](./img/1.png)
 
-Índice
+## Índice
 
-1. Introdução
+1. [Introdução](#introdução)
+2. [Especificações](#especificações)
+3. [Topologia simplificada](#topologia-simplificada)
+4. [Pré requisitos](#pré-requisitos)
+5. [Procedimento técnico](#procedimento-técnico)
+    5. 1. [Primeira etapa - OpenCMS](#primeira-etapa-opencms)
+    5. 2. [Segunda etapa - PostgreSQL](#segunda-etapa-postgresql)
+    5. 3. [Terceira etapa - instalação do OpenCMS](#terceira-etapa-instalação-do-opencms)
+    5. 4. [Quarta etapa - Nginx](#quarta-etapa-nginx)
+6. [Referências](#referencias)
+
+## Introdução
 
 Essa documentação tem por objetivo documentar a entrega do teste técnico solicitado, assim como tornar transparente a implementação do OpenCMS e a utilização do Nginx como proxy reverso a fim de contemplar o encaminhamento de acessos recebidos para a aplicação, farei uma apresentação guiada, assim como evidenciarei artefatos do procedimento de implementação do OpenCMS.
 
 
-2. Especificações
+## Especificações
 
 O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso. Onde:
 
@@ -19,7 +30,7 @@ O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso.
 
 - Deve existir o acesso a aplicação através de um proxy reverso Nginx
 
-3. Topologia simplificada
+## Topologia simplificada
 
 ![topologia](./img/2.png)
 
@@ -42,7 +53,7 @@ O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso.
 
 A escolha dessa arquitetura foi devido ao fato da facilidade de manutenções futuras, troubleshooting em caso de necessidade de inspeção de erros e tracing de logs, tendo cada recurso isolado em uma VM própria para cada serviço podemos ser mais assertivos em atualizações futuras além de diminuir o acoplamento de recursos em um único servidor.
 
-4. Pré requisitos
+## Pré requisitos
 
 - 3 VMs Linux 
 - Java JDK, versão 5 ou superior
@@ -51,7 +62,7 @@ A escolha dessa arquitetura foi devido ao fato da facilidade de manutenções fu
 - OpenCMS
 - Nginx
 
-5. Procedimento técnico
+## Procedimento técnico
 
 Iniciaremos o procedimento técnico com a instalação do servidor de aplicação OpenCMS, para isso considerarei que já provisionamos uma máquina Debian que será usada como base para a instalação das outras VMs, as especificações escolhidas para cobrir esse caso são:
 
@@ -141,7 +152,7 @@ Uma vez que a comunicação entre as máquinas está confirmada, podemos dar seq
 
     ![it works!](./img/10.png)
 
-## Primeira etapa OpenCMS
+### Primeira etapa OpenCMS
 
 Para a aquisição da aplicação criamos uma pasta chamada /root/opencms com o comando:
 
@@ -185,7 +196,7 @@ Vale lembrar que usaremos um banco de dados PostgreSQL, portanto caso outra opç
 
 Sendo assim, aqui encerra-se a primeira etapa para a instalação do OpenCMS. Para a segunda etapa será necessário a instalação do banco de dados, portanto a partir desse ponto daremos seguimento no provisionamento da VM do banco de dados.
 
-## Segunda etapa PostgreSQL
+### Segunda etapa PostgreSQL
 
 Tomando o sistema Debian padrão como base e para simplificar a adoção do banco de dados PostgreSQL, utilizamos a mesma linha de raciocínio para instalação do PostgreSQL, pesquisamos o repositório padrão e nos decidimos pela versão com suporte para casos de intervenções futuras, seguem os comando utilizados abaixo:
 
@@ -275,7 +286,7 @@ ss -nltp
 
 Finalizada a instalação do Banco de dados, assim como dos requisitos para a instalação do OpenCMS, voltaremos a interface web para dar seguimento na instalação da aplicação.
 
-## Terceira etapa instalação do OpenCMS
+### Terceira etapa instalação do OpenCMS
 
 Utilize as credenciais “postgres” e “senha” conforme modificamos em algumas etapas acima e em seguida defina um usuário que será criado junto com o banco de dados, no nosso caso escolhemos o usuário “opencmsuser” e “senha” como credenciais.
 
@@ -299,7 +310,7 @@ Para nossa conveniência seguiremos com a configuração padrão:
 
 A instalação foi concluída com sucesso, resta agora a configuração do servidor de proxy reverso Nginx.
 
-## Quarta etapa Nginx
+### Quarta etapa Nginx
 
 Tomaremos como base a VM Debian para instalar o Nginx da mesma forma que foi com os outros requisitos, utilizamos o seguinte comando:
 
@@ -360,7 +371,7 @@ Dessa maneira quando o endereço “http://proxy.local/opencms” for acessado s
 
 ![aplicacao](./img/24.png)
 
-6. Referencias
+## Referencias
 
 [Documentação OpenCMS](https://documentation.opencms.org/central/)  
 [Documentação PostgreSQL](https://www.postgresql.org/docs/)  
