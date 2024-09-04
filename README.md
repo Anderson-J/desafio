@@ -23,6 +23,7 @@ Essa documentação tem por objetivo documentar a entrega do teste técnico soli
 
 
 ## Especificações
+## Especificações
 
 O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso. Onde:
 
@@ -33,9 +34,14 @@ O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso.
 - Deve existir o acesso a aplicação através de um proxy reverso Nginx
 
 ## Topologia simplificada
+## Topologia simplificada
 
 ![topologia](./img/2.png)
 
+- Nginx – Proxy Reverso:  
+    Hostname: debian-proxy  
+    IPV4: 172.20.0.88/24  
+    DNS: proxy.local  
 - Nginx – Proxy Reverso:  
     Hostname: debian-proxy  
     IPV4: 172.20.0.88/24  
@@ -46,8 +52,16 @@ O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso.
     Hostname: debian-app  
     IPV4: 172.20.0.89/24  
     DNS: opencms.local  
+- App Server:  
+    Hostname: debian-app  
+    IPV4: 172.20.0.89/24  
+    DNS: opencms.local  
 
 
+- Data Base Server:  
+    Hostname: debian-db  
+    IPV4: 172.20.0.74/24  
+    DNS: database.local  
 - Data Base Server:  
     Hostname: debian-db  
     IPV4: 172.20.0.74/24  
@@ -55,6 +69,7 @@ O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso.
 
 A escolha dessa arquitetura foi devido ao fato da facilidade de manutenções futuras, troubleshooting em caso de necessidade de inspeção de erros e tracing de logs, tendo cada recurso isolado em uma VM própria para cada serviço podemos ser mais assertivos em atualizações futuras além de diminuir o acoplamento de recursos em um único servidor.
 
+## Pré requisitos
 ## Pré requisitos
 
 - 3 VMs Linux 
@@ -64,6 +79,7 @@ A escolha dessa arquitetura foi devido ao fato da facilidade de manutenções fu
 - OpenCMS
 - Nginx
 
+## Procedimento técnico
 ## Procedimento técnico
 
 Iniciaremos o procedimento técnico com a instalação do servidor de aplicação OpenCMS, para isso considerarei que já provisionamos uma máquina Debian que será usada como base para a instalação das outras VMs, as especificações escolhidas para cobrir esse caso são:
@@ -221,6 +237,7 @@ eleve as permissões de usuário ao se tornar root com o comando:
 ```bash
 sudo -i
 ```
+Entre no usuário ***"postgres"***:
 
 ```bash
 su - postgres
