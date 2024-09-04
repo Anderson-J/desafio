@@ -23,7 +23,6 @@ Essa documentação tem por objetivo documentar a entrega do teste técnico soli
 
 
 ## Especificações
-## Especificações
 
 O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso. Onde:
 
@@ -33,7 +32,6 @@ O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso.
 
 - Deve existir o acesso a aplicação através de um proxy reverso Nginx
 
-## Topologia simplificada
 ## Topologia simplificada
 
 ![topologia](./img/2.png)
@@ -70,7 +68,6 @@ O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso.
 A escolha dessa arquitetura foi devido ao fato da facilidade de manutenções futuras, troubleshooting em caso de necessidade de inspeção de erros e tracing de logs, tendo cada recurso isolado em uma VM própria para cada serviço podemos ser mais assertivos em atualizações futuras além de diminuir o acoplamento de recursos em um único servidor.
 
 ## Pré requisitos
-## Pré requisitos
 
 - 3 VMs Linux 
 - Java JDK, versão 5 ou superior
@@ -79,7 +76,6 @@ A escolha dessa arquitetura foi devido ao fato da facilidade de manutenções fu
 - OpenCMS
 - Nginx
 
-## Procedimento técnico
 ## Procedimento técnico
 
 Iniciaremos o procedimento técnico com a instalação do servidor de aplicação OpenCMS, para isso considerarei que já provisionamos uma máquina Debian que será usada como base para a instalação das outras VMs, as especificações escolhidas para cobrir esse caso são:
@@ -128,6 +124,8 @@ Segue abaixo o teste de comunicação entre as VMs:
 
 ![ping -c3](./img/7.png)
 
+### Primeira etapa - OpenCMS
+
 Uma vez que a comunicação entre as máquinas está confirmada, podemos dar sequencia ao deploy do OpenCMS e para isso faremos a instalação dos componentes pré requisitos para o correto funcionamento da aplicação, são eles:
 
 - Java JDK
@@ -169,8 +167,6 @@ Uma vez que a comunicação entre as máquinas está confirmada, podemos dar seq
     Caso a instalação tenha sido bem sucedida será possível acessar o caminho especificado anteriormente na porta padrão de escuta do Tomcat conforme imagem abaixo:
 
     ![it works!](./img/10.png)
-
-### Primeira etapa - OpenCMS
 
 Para a aquisição da aplicação criamos uma pasta chamada /root/opencms com o comando:
 
