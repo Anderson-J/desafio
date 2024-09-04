@@ -292,7 +292,7 @@ Para nossa conveniência seguiremos com a configuração padrão:
 
 ![importing modules](./img/19.png)
 
-![finished](./img/20)
+![finished](./img/20.png)
 
 ![congratulations](./img/21.png)
 
