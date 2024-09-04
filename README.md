@@ -9,10 +9,10 @@
 3. [Topologia simplificada](#topologia-simplificada)
 4. [Pré requisitos](#pré-requisitos)
 5. [Procedimento técnico](#procedimento-técnico)
-    5. 1. [Primeira etapa - OpenCMS](#primeira-etapa-opencms)
-    5. 2. [Segunda etapa - PostgreSQL](#segunda-etapa-postgresql)
-    5. 3. [Terceira etapa - instalação do OpenCMS](#terceira-etapa-instalação-do-opencms)
-    5. 4. [Quarta etapa - Nginx](#quarta-etapa-nginx)
+    5. 1. [Primeira etapa - OpenCMS](#primeira-etapa---opencms)
+    5. 2. [Segunda etapa - PostgreSQL](#segunda-etapa---postgresql)
+    5. 3. [Terceira etapa - instalação do OpenCMS](#terceira-etapa---instalação-do-opencms)
+    5. 4. [Quarta etapa - Nginx](#quarta-etapa---nginx)
 6. [Referências](#referencias)
 
 ---
@@ -385,7 +385,7 @@ Dessa maneira quando o endereço “http://proxy.local/opencms” for acessado s
 
 ![aplicacao](./img/24.png)
 
-## Referencias
+## Referências
 
 [Documentação OpenCMS](https://documentation.opencms.org/central/)  
 [Documentação PostgreSQL](https://www.postgresql.org/docs/)  
