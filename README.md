@@ -361,8 +361,8 @@ Dessa maneira quando o endereço “http://proxy.local/opencms” for acessado s
 
 6. Referencias
 
-[Documentação OpenCMS](https://documentation.opencms.org/central/)
-[Documentação PostgreSQL](https://www.postgresql.org/docs/)
-[Documentação Tomcat](https://tomcat.apache.org/tomcat-8.5-doc/index.html)
-[Documentação OpenJDK 17](https://devdocs.io/openjdk~17/)
-[Documentação Nginx](https://nginx.org/en/docs/)
+[Documentação OpenCMS](https://documentation.opencms.org/central/)  
+[Documentação PostgreSQL](https://www.postgresql.org/docs/)  
+[Documentação Tomcat](https://tomcat.apache.org/tomcat-8.5-doc/index.html)  
+[Documentação OpenJDK 17](https://devdocs.io/openjdk~17/)  
+[Documentação Nginx](https://nginx.org/en/docs/)  
