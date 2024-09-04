@@ -1,0 +1,10 @@
+# Arquivo de configuração
+# Caminho para arquivo:
+# /etc/hosts
+#
+# Conteúdo:
+# ___________________________________________________
+127.0.0.1       localhost
+172.20.0.89     opencms.local
+172.20.0.88     proxy.local
+172.20.0.74     database.local
