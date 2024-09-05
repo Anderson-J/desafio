@@ -13,7 +13,7 @@
     5. 2. [Segunda etapa - PostgreSQL](#5-2-segunda-etapa---postgresql)  
     5. 3. [Terceira etapa - instalação do OpenCMS](#5-3-terceira-etapa---instalação-do-opencms)  
     5. 4. [Quarta etapa - Nginx](#5-4-quarta-etapa---nginx)  
-6. [Conteinerização](#6-conteinerização)  
+6. [containerização](#6-containerização)  
 7. [Referências](#7-referênciasreferencias)
 
 ---
@@ -389,9 +389,9 @@ Dessa maneira quando o endereço “http://proxy.local/opencms” foi acessado f
 
 ![aplicacao](./img/24.png)
 
-## 6. Conteinerização
+## 6. containerização
 
-A partir desse ponto pretendo entregar os diferenciais de conteinerização com Docker, a proposta trata-se de criar as imagems de container e iniciar a aplicação de uma só vez utilizando a ferramenta ***"docker-compose"***, para esse caso escolhi utilizar os containers em um único nó de host, pois já que vimos uma abordagem distribuída acredito que pode enriquecer a minha proposta de resposa ao desafio mais essa maneira de fazer. Os conteiners serão provisionados na minha máquina local que possui o IP 172.20.0.150. Assumirei que as aplicações básicas de gerenciamento de conteiners já estão instaladas na máquina, pois falar disso fugiria do escopo do desafio proposto, portanto não abordarei a instalação das ferramentas utilizadas.
+A partir desse ponto pretendo entregar os diferenciais de containerização com Docker, a proposta trata-se de criar as imagens de container e iniciar a aplicação de uma só vez utilizando a ferramenta ***"docker-compose"***, para esse caso escolhi utilizar os containers em um único nó de host, pois já que vimos uma abordagem distribuída acredito que pode enriquecer a minha proposta de resposta ao desafio mais essa maneira de fazer. Os containers serão provisionados na minha máquina local que possui o IP 172.20.0.150. Assumirei que as aplicações básicas de gerenciamento de containers já estão instaladas na máquina, pois falar disso fugiria do escopo do desafio proposto, portanto não abordarei a instalação das ferramentas utilizadas.
 
 Iniciei criando uma pasta chamada ***"opencms-docker"***
 
@@ -399,7 +399,7 @@ Iniciei criando uma pasta chamada ***"opencms-docker"***
 mkdir opencms-docker && cd opencms-docker
 ```
 
-Criei uma estrutura para separar os arquivos utilizados que consiste em criar uma pasta para cada conteiner que será executado no host:
+Criei uma estrutura para separar os arquivos utilizados que consiste em criar uma pasta para cada container que será executado no host:
 
 ```shell
 mkdir nginxfiles opencmsfiles postgresfiles && cd opencmsfiles
@@ -554,11 +554,11 @@ Note que fixei ips para cada serviço individualmente com a intenção de explor
 > opencms: 192.168.0.3  
 > nginx: 192.168.0.4  
 
-Perceba também que os conteiners possuem resolução de nome na rede declarada ***opencms-network***, porém farei uso de apontamento direto dos ips declarados.
+Perceba também que os containers possuem resolução de nome na rede declarada ***opencms-network***, porém farei uso de apontamento direto dos ips declarados.
 
 Esse arquivo yaml é a versão de persistência de dados no sistema de arquivos do host, é possível apenas testar sem a pretensão de persistir os dados do PostgreSQL, removendo as declarações de volume no serviço postgres e ao final do arquivo.
 
-Finalmente, iniciei os conteiners com o comando:
+Finalmente, iniciei os containers com o comando:
 
 ```shell
 docker-compose up -d
