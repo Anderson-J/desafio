@@ -14,7 +14,7 @@
     5. 3. [Terceira etapa - instalação do OpenCMS](#5-3-terceira-etapa---instalação-do-opencms)  
     5. 4. [Quarta etapa - Nginx](#5-4-quarta-etapa---nginx)  
 6. [Conteinerização](#6-conteinerização)  
-7. [Referências](#referencias)
+7. [Referências](#7-referênciasreferencias)
 
 ---
 
@@ -603,7 +603,7 @@ segui com a instalação até a finalização
 ![up and running](img/37.png)
 
 
-## Referências
+## 7. Referências
 
 [Documentação OpenCMS](https://documentation.opencms.org/central/)  
 [Documentação PostgreSQL](https://www.postgresql.org/docs/)  
