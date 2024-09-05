@@ -389,7 +389,7 @@ Dessa maneira quando o endereço “http://proxy.local/opencms” foi acessado f
 
 ![aplicacao](./img/24.png)
 
-## 6. containerização
+## 6. Containerização
 
 A partir desse ponto pretendo entregar os diferenciais de containerização com Docker, a proposta trata-se de criar as imagens de container e iniciar a aplicação de uma só vez utilizando a ferramenta ***"docker-compose"***, para esse caso escolhi utilizar os containers em um único nó de host, pois já que vimos uma abordagem distribuída acredito que pode enriquecer a minha proposta de resposta ao desafio mais essa maneira de fazer. Os containers serão provisionados na minha máquina local que possui o IP 172.20.0.150. Assumirei que as aplicações básicas de gerenciamento de containers já estão instaladas na máquina, pois falar disso fugiria do escopo do desafio proposto, portanto não abordarei a instalação das ferramentas utilizadas.
 
