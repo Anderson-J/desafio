@@ -399,25 +399,25 @@ Iniciei criando uma pasta chamada ***"opencms-docker"***
 mkdir opencms-docker && cd opencms-docker
 ```
 
-Criei uma estrutura para separar os arquivos utilizados que consiste em criar uma pasta para cada container que será executado no host:
+Criei uma estrutura para separar os arquivos utilizados no host:
 
 ```shell
 mkdir nginxfiles opencmsfiles postgresfiles && cd opencmsfiles
 ```
 
-Após o comando anterior, na pasta opencmsfiles repetirei o download realizado em uma das etapas anteriores de fazer o download da aplicação diretamente para a pasta atual:
+Após o comando anterior, na pasta opencmsfiles repetirei o download realizado em uma das etapas anteriores diretamente para a pasta opencmsfiles:
 
 ```shell
 wget http://www.opencms.org/downloads/opencms/opencms-17.0.zip
 ```
 
-Após baixar o app repeti o procedimento de extrair os arquivos para a pasta
+Após baixar o app repeti o procedimento de extrair os arquivos para a pasta citada acima
 
 ```shell
 unzip opencms-17.0.zip
 ```
 
-Após isso, criei um Dockerfile que será a base da imagem que criaremos a seguir com o comando:
+Criei um Dockerfile que será a base da imagem que criaremos a seguir com o comando:
 
 ```shell
 vim Dockerfile
