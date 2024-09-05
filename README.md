@@ -575,7 +575,7 @@ após aceitar os termos:
 
 ![testes](img/29.png)
 
-Marquei a opção de banco de dados PostgreSQL e adicionei as credenciais declaradas no Dockerfile acima "postgres" e "senha" além disso, para manter o padrão utilizei os mesmo nomes para criação de usuário "opencmsuser" e "senha", além dissom no campo de conexão com banco de dados utilizei diretamente o ip para manter o estabelecido anteriormente.
+Marquei a opção de banco de dados PostgreSQL e adicionei as credenciais declaradas no Dockerfile acima, "postgres" e "senha" além disso, para manter o padrão utilizei os mesmos nomes para criação de usuário "opencmsuser" e "senha", já no campo de conexão com banco de dados utilizei diretamente o ip para manter conforme estabelecido anteriormente.
 
 ![Conexão com db](img/30.png)
 
