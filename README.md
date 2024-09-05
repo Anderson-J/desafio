@@ -14,7 +14,7 @@
     5. 3. [Terceira etapa - instalação do OpenCMS](#5-3-terceira-etapa---instalação-do-opencms)  
     5. 4. [Quarta etapa - Nginx](#5-4-quarta-etapa---nginx)  
 6. [containerização](#6-containerização)  
-7. [Referências](#7-referênciasreferencias)
+7. [Referências](#7-referências)
 
 ---
 
