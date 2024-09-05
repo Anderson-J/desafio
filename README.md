@@ -214,7 +214,7 @@ Encerrei aqui a primeira etapa para a instalação do OpenCMS. Para a segunda et
 
 ### 5. 2. Segunda etapa - PostgreSQL
 
-Tomando o sistema Debian padrão como base e para simplificar a adoção do banco de dados PostgreSQL, utilizri a mesma linha de raciocínio para instalação do PostgreSQL, pesquisei o repositório padrão e nos decidi pela versão com suporte para casos de intervenções futuras, seguem os comando utilizados abaixo:
+Tomando o sistema Debian padrão como base e para simplificar a adoção do banco de dados PostgreSQL, utilizarei a mesma linha de raciocínio para instalação do PostgreSQL, pesquisei o repositório padrão e nos decidi pela versão com suporte para casos de intervenções futuras, seguem os comando utilizados abaixo:
 
 Comando para buscar e filtrar os resultados de PostgreSQL:
 
