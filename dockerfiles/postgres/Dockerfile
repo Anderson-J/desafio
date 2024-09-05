@@ -1,0 +1,6 @@
+FROM postgres:latest
+
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=senha
+
+EXPOSE 5432

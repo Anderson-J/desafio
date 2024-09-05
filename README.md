@@ -443,7 +443,7 @@ Com o Dockerfile em mãos, inicei o buid da imagem:
 docker build --no-cache -t opencms-tomcat .
 ```
 
-Após a conclusão do processo de build troquei de diretório para o ***nginxfiles***
+Após a conclusão do processo de build troquei de diretório para o correspondente ao nginx
 
 nesse diretório preparei dois arquivos de configuração que serão necessários para a correta configuração do proxy reverso, são eles o nginx.conf e o opencms onde o opencms é arquivo de confiruação do encaminhamento de acessos através proxy de fato. Iniciei a declaração do arquivo Dockerfile referente a imagem do proxy reverso, tendo como conteúdo final o seguinte:
 
@@ -466,7 +466,7 @@ docker build --no-cache -t proxy-nginx .
 ```
 
 
-Por último iniciei o desenvolvimento do Dockerfile referente a imagem do PostgreSQL, segue o conteúdo:
+Por último iniciei o desenvolvimento do Dockerfile referente a imagem do PostgreSQL na pasta correspondente, segue o conteúdo:
 
 ```Dockerfile
 FROM postgres:latest
@@ -610,3 +610,4 @@ segui com a instalação até a finalização
 [Documentação Tomcat](https://tomcat.apache.org/tomcat-8.5-doc/index.html)  
 [Documentação OpenJDK 17](https://devdocs.io/openjdk~17/)  
 [Documentação Nginx](https://nginx.org/en/docs/)  
+[Documentação Docker](https://docs.docker.com/manuals/)
