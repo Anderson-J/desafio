@@ -477,7 +477,7 @@ ENV POSTGRES_PASSWORD=senha
 EXPOSE 5432
 ```
 
-Para manter o padrão anterior contiuei utilizando o usuário ***"postgres"*** e a senha ***"senha"***. tendo completado essa 
+Para manter o padrão anterior continuei utilizando o usuário ***"postgres"*** e a senha ***"senha"***. tendo completado essa 
 
 Com o Dockerfile em mãos, inicei o buid da imagem:
 
