@@ -385,7 +385,7 @@ nginx -s reload
 
 ![nginx conf](./img/23.png)
 
-Dessa maneira quando o endereço “http://proxy.local/opencms” foi acessado fui imediatamente direcionado para a página correspondente da aplicação:
+Dessa maneira quando o utilizei o endereço “http://proxy.local/opencms” fui imediatamente direcionado para a página correspondente da aplicação:
 
 ![aplicacao](./img/24.png)
 
