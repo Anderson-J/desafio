@@ -43,11 +43,6 @@ O objeto de entrega é o acesso ao OpenCMS através do NGINX como proxy reverso.
     IPV4: 172.20.0.88/24  
     DNS: proxy.local  
 
-- Nginx – Proxy Reverso:  
-    Hostname: debian-proxy  
-    IPV4: 172.20.0.88/24  
-    DNS: proxy.local  
-
 - App Server:  
     Hostname: debian-app  
     IPV4: 172.20.0.89/24  
